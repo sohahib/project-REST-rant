@@ -16,7 +16,9 @@ app.get('/', (req, res)=>{
 app.get('/places', (req, res)=>{
     res.render('index')
 })
-
+app.get('/new', (req, res) => {
+    res.render('places/new')
+  })
 
 app.get('*', (req, res) => {
     res.render('error404')
