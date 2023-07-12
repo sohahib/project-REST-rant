@@ -2,6 +2,8 @@ const express = require('express')
 const app = express()
 require('dotenv').config()
 
+
+    
 app.get('/', (req,res)=>{
       let places = [{
             name: 'H-Thai-ML',
@@ -19,5 +21,9 @@ app.get('/', (req,res)=>{
           
       res.render('places/index', {places})
 })
+
+app.get('/new', (req, res) => {
+      res.render('places/new')
+    })
 
 module.exports = app

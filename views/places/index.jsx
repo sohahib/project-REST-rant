@@ -23,6 +23,7 @@ function index (data) {
               <div className='row'>
                     {placesFormatted}
               </div>
+              <a href="/">Go To Home Page</a>
           </main>
       </Def>
   )
