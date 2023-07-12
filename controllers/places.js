@@ -12,7 +12,6 @@ app.get('/new', (req, res) => {
     })
 
 app.post('/', (req, res) => {
-      console.log(req.body)
       if(!req.body.pic){
             req.body.pic = 'http://placekitten.com/400/400'
       }
@@ -25,6 +24,6 @@ app.post('/', (req, res) => {
       places.push(req.body)
       res.redirect('/places')
     })
-    
+   // lett
 
 module.exports = app
