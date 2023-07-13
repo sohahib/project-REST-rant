@@ -36,6 +36,5 @@ app.post('/', (req, res) => {
       places.push(req.body)
       res.redirect('/places')
     })
-   // lett
 
 module.exports = app
