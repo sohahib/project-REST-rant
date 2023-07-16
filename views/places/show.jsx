@@ -7,7 +7,7 @@ function show (data) {
           <main>
             <h1> {data.places.name}</h1>
             <div className="show-container">
-              <div> IMAge goes here</div>
+              <div> <img src={data.places.pic} alt={data.places.name} /> </div>
               <div>
                 <div>
                   <h1>Rating</h1>
@@ -15,7 +15,7 @@ function show (data) {
                 </div>
                 <div>
                   <h1>Description</h1>
-                  <p>Located in Phoenix, AZ and serving Cofee, Bakery</p>
+                  <p>Located in {data.places.city}, {data.places.state} and serving {data.places.cuisines}</p>
                 </div>
               </div>
             </div>
@@ -26,7 +26,7 @@ function show (data) {
               <a href={`/places/${data.id}/edit`} className="btn btn-warning"> 
                Edit
               </a>  
-              <form method="POST" action={`/places/${data.id}?_method = DELETE`}> 
+              <form method="POST" action={`/places/${data.id}?_method=DELETE`}> 
                 <button type="submit" className="btn btn-danger">
                   Delete
                 </button>

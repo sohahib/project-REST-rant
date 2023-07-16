@@ -2,6 +2,7 @@ const React = require('react')
 const Def = require("../default")
 
 function index (data) {
+  console.log(data)
     let placesFormatted = data.places.map((place, index) => {
       return (
         <div className='rant col-sm-6'>
@@ -20,7 +21,7 @@ function index (data) {
         </div>
       )
     })
-    
+
     return ( 
       <Def>
           <main>
