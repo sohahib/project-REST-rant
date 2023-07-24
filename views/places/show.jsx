@@ -5,18 +5,24 @@ function show (data) {
     return (
         <Def>
           <main>
-            <h1> {data.places.name}</h1>
+            <h1> {data.place.name}</h1>
             <div className="show-container">
-              <div> <img src={data.places.pic} alt={data.places.name} /> </div>
+              <div> 
+                  <img src={data.place.pic} alt={data.place.name} />
+                  <h3>Located in {data.place.city}, {data.place.state} </h3>
+              </div>
               <div>
                 <div>
                   <h1>Rating</h1>
                   <p>Not Rated</p>
                 </div>
-                <div>
                   <h1>Description</h1>
-                  <p>Located in {data.places.city}, {data.places.state} and serving {data.places.cuisines}</p>
-                </div>
+                <h3>
+                  {data.place.showEstablished()}
+                </h3>
+                <h4>
+                  Serving {data.place.cuisines}
+                </h4>
               </div>
             </div>
             <div className="comments">
