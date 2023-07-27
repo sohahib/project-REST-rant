@@ -21,7 +21,7 @@ function edit_form (data){
                                     />
                         </div>
                         <div className="form-group col-sm-6">
-                            <label htmlFor="city">Place Name</label>
+                            <label htmlFor="city">Place City</label>
                             <input id="city" 
                                    name='city'
                                    value={data.place.city}/>

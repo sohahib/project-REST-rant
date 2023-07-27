@@ -3,9 +3,9 @@ const Def = require("../default")
 
 function index (data) {
   console.log(data)
-    let placesFormatted = data.places.map((place) => {
+    let placesFormatted = data.places.map((place, index) => {
       return (
-        <div className='rant col-sm-6'>
+        <div className='rant col-sm-6' key={index}>
             <h2>
                 <a href={`/places/${place.id}`}>
                     {place.name}
